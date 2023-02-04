@@ -63,6 +63,7 @@ main {
 }
 
 .start {
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -72,20 +73,21 @@ main {
 }
 
 .airplane-container {
-  width: 100%;
-  position: absolute;
-  top: 30%;
+  z-index: 5;
+  position: relative;
+  translate: 30% -23%;
   animation: land 1s ease-in-out 0s forwards;
 }
 
 .airplane {
   position: absolute;
+  left: -30%;
   transform: scale(0.7);
 }
 
 .airplane-door {
   transform: scale(0.085);
-  translate: -11.2% -38%;
+  translate: -38.5% -38%;
   animation: open-door 1s ease-in-out 1s forwards;
 }
 
@@ -93,7 +95,7 @@ main {
   opacity: 0;
   position: absolute;
   top: 7%;
-  left: -12%;
+  left: -40%;
   transform-origin: top;
   scale: 0.1;
   animation: reveal-man 0.2s ease-in-out 2s forwards,
@@ -107,8 +109,8 @@ main {
   position: absolute;
   transform-origin: top;
   scale: 0.2;
-  top: 2%;
-  left: 1%;
+  top: 2.5%;
+  left: -21%;
   animation: reveal-man 0.2s ease-in-out 3.5s forwards;
 }
 
@@ -189,7 +191,7 @@ div.celebration img:nth-child(3) {
 }
 @keyframes open-door {
   to {
-    translate: -6.2% -37.8%;
+    translate: -32.5% -38%;
     scale: 0.9;
   }
 }
@@ -202,8 +204,8 @@ div.celebration img:nth-child(3) {
   0% {
   }
   to {
-    top: 3.7%;
-    left: 1%;
+    top: 4%;
+    left: -21%;
     scale: 0.2;
   }
 }
@@ -236,7 +238,7 @@ div.celebration img:nth-child(3) {
 }
 @keyframes reveal-coins {
   to {
-    top: 30%;
+    top: 2%;
   }
 }
 @keyframes animate-coins {
@@ -251,152 +253,25 @@ div.celebration img:nth-child(3) {
 }
 
 @media only screen and (max-width: 600px) {
-  .start {
-    width: 100%;
-    height: 50vh;
-  }
-
   .start img {
-    height: 100%;
-  }
-
-  .video {
-    width: 200px;
-    height: 150px;
-  }
-
-  .description p {
-    font-size: 16px;
-  }
-
-  .airplane-container {
-    top: 10px;
-    animation: land 1s ease-in-out 0s forwards;
-  }
-
-  .airplane {
-    transform: scale(0.3);
-  }
-
-  .airplane-door {
-    transform: scale(0.14);
-    top: -5px;
-    left: 483px;
-    animation: open-door 1s ease-in-out 1s forwards;
-  }
-
-  .man1 {
-    opacity: 0;
-    transform: scale(0.12);
-    top: -7px;
-    left: 462px;
-    animation: reveal-man 0.2s ease-in-out 2s forwards,
-      jump 0.5s ease-in-out 2.1s forwards, move-man 1s ease-in-out 2.1s forwards,
-      jump 0.5s ease-in-out 2.5s forwards,
-      hide-man 0.2s ease-in-out 3.5s forwards;
-  }
-
-  .man2 {
-    top: 50px;
-    left: 500px;
-    scale: 0.3;
-    animation: reveal-man 0.2s ease-in-out 3.5s forwards;
-  }
-
-  div.celebration img {
-    top: -100%;
-    left: 50%;
-    translate: -50% 0;
-  }
-
-  div.celebration img:nth-child(1) {
-    animation: celebrate 1s ease-in 3.2s forwards;
-  }
-  div.celebration img:nth-child(2) {
-    left: 90%;
-    translate: -50% 0;
-    animation: celebrate 1s ease-in 3.5s forwards;
-  }
-  div.celebration img:nth-child(3) {
-    top: -100%;
-    left: 10%;
-    animation: celebrate 1s ease-in 3.5s forwards;
-  }
-
-  div.coins img:nth-child(1) {
-    position: absolute;
-    top: -50px;
-    transform: scale(0.2);
-  }
-  div.coins img:nth-child(2) {
-    left: -250px;
-    position: absolute;
-    top: 11px;
-    transform: scale(0.2);
-  }
-  div.coins img:nth-child(3) {
-    position: absolute;
-    top: 150px;
-    left: 500px;
-    transform: scale(0.4);
-  }
-
-  div.coins img:nth-child(2n) {
-    translate: 0 -60%;
-    rotate: 45deg;
-    scale: 0.5;
-    animation: reveal-first-coins 5s ease-in-out 3s forwards;
-  }
-  div.coins img:nth-child(n) {
-    translate: 0 -60%;
-    scale: 0.5;
-    animation: reveal-second-coins 2s ease-in-out 3.2s forwards;
-  }
-
-  .cta {
-    width: 160px;
-  }
-
-  .play-button {
-    scale: 0.5;
+    width: 200%;
   }
 
   @keyframes land {
     0% {
-      right: -100px;
+      right: -100%;
     }
     to {
-      right: 350px;
+      right: 50%;
     }
   }
 
-  @keyframes open-door {
-    to {
-      left: 510px;
-      scale: 0.99;
-    }
-  }
-
-  @keyframes move-man {
+  @keyframes celebrate {
     0% {
     }
     to {
-      left: 500px;
-      top: 50px;
-      scale: 2;
-    }
-  }
-
-  @keyframes reveal-first-coins {
-    to {
-      translate: 0;
-      rotate: 270deg;
-    }
-  }
-  @keyframes reveal-second-coins {
-    to {
-      translate: 0;
-      rotate: 370deg;
+      top: 10%;
+      scale: 1.5;
     }
   }
 }
