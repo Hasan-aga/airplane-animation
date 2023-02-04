@@ -74,6 +74,90 @@ div.celebration img:nth-child(3) {
   animation: celebrate 1s ease-in 3.5s forwards;
 }
 
+div.coins img:nth-child(1) {
+  position: absolute;
+  top: 100px;
+  transform: scale(0.3);
+}
+div.coins img:nth-child(2) {
+  position: absolute;
+  top: 110px;
+  left: 300px;
+  transform: scale(0.2);
+}
+div.coins img:nth-child(3) {
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  transform: scale(0.4);
+}
+div.coins img:nth-child(4) {
+  position: absolute;
+  top: 200px;
+  left: 780px;
+  transform: scale(0.21);
+}
+div.coins img:nth-child(5) {
+  position: absolute;
+  top: 70px;
+  left: 970px;
+  transform: scale(0.41);
+}
+div.coins img:nth-child(6) {
+  position: absolute;
+  top: 400px;
+  left: 1500px;
+  transform: scale(0.4);
+}
+div.coins img:nth-child(7) {
+  position: absolute;
+  top: 500px;
+  left: 130px;
+  transform: scale(0.32);
+}
+div.coins img:nth-child(8) {
+  position: absolute;
+  top: 510px;
+  left: 970px;
+  transform: scale(0.15);
+}
+div.coins img:nth-child(9) {
+  position: absolute;
+  top: 580px;
+  left: 370px;
+  transform: scale(0.45);
+}
+div.coins img:nth-child(10) {
+  position: absolute;
+  top: 470px;
+  left: 1070px;
+  transform: scale(0.4);
+}
+div.coins img:nth-child(11) {
+  position: absolute;
+  top: 500px;
+  left: 1230px;
+  transform: scale(0.19);
+}
+div.coins img:nth-child(12) {
+  position: absolute;
+  top: 190px;
+  left: 1210px;
+  transform: scale(0.2);
+}
+
+div.coins img:nth-child(2n) {
+  background-color: red;
+  translate: 0 -500%;
+  rotate: 45deg;
+  animation: reveal-first-coins 5s ease-in-out 3s forwards;
+}
+div.coins img:nth-child(n) {
+  translate: 0 -500%;
+
+  animation: reveal-second-coins 2s ease-in-out 3.2s forwards;
+}
+
 @keyframes land {
   0% {
     right: -1000px;
@@ -132,5 +216,17 @@ div.celebration img:nth-child(3) {
   }
   to {
     top: 0;
+  }
+}
+@keyframes reveal-first-coins {
+  to {
+    translate: 0 10%;
+    rotate: 270deg;
+  }
+}
+@keyframes reveal-second-coins {
+  to {
+    translate: 0 20%;
+    rotate: 370deg;
   }
 }
