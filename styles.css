@@ -8,4 +8,44 @@ body {
 }
 
 .start {
+  position: relative;
+  overflow: hidden;
+}
+
+.airplane-container {
+  position: absolute;
+  top: 260px;
+  animation: land 1s ease-in-out 0s forwards;
+}
+
+.airplane {
+  position: absolute;
+  transform: scale(0.7);
+}
+
+.airplane-door {
+  position: absolute;
+  transform: scale(0.39);
+  left: 486px;
+  animation: open-door 1s ease-in-out 1.1s forwards;
+}
+
+@keyframes land {
+  0% {
+    right: -1000px;
+  }
+  to {
+    right: 1700px;
+  }
+}
+@keyframes open-door {
+  0% {
+    left: 486px;
+    top: 0px;
+  }
+  to {
+    left: 580px;
+    scale: 0.9;
+    top: 10px;
+  }
 }
