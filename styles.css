@@ -115,21 +115,22 @@ main {
 div.celebration img {
   position: absolute;
   top: -100%;
-  left: 50%;
-  translate: -50% 0;
+  left: 5%;
 }
 
 div.celebration img:nth-child(1) {
-  animation: celebrate 1s ease-in 3.2s forwards;
-}
-div.celebration img:nth-child(2) {
-  left: 90%;
-  translate: -50% 0;
+  width: 30%;
+  left: 0;
   animation: celebrate 1s ease-in 3.5s forwards;
 }
+div.celebration img:nth-child(2) {
+  width: 40%;
+  left: 30%;
+  animation: celebrate 1s ease-in 3.2s forwards;
+}
 div.celebration img:nth-child(3) {
-  top: -100%;
-  left: 10%;
+  width: 30%;
+  left: 60%;
   animation: celebrate 1s ease-in 3.5s forwards;
 }
 
