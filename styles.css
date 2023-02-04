@@ -392,6 +392,10 @@ div.coins img:nth-child(n) {
     width: 160px;
   }
 
+  .play-button {
+    scale: 0.5;
+  }
+
   @keyframes land {
     0% {
       right: -100px;
