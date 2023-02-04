@@ -147,7 +147,6 @@ div.coins img:nth-child(12) {
 }
 
 div.coins img:nth-child(2n) {
-  background-color: red;
   translate: 0 -500%;
   rotate: 45deg;
   animation: reveal-first-coins 5s ease-in-out 3s forwards;
