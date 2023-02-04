@@ -388,6 +388,10 @@ div.coins img:nth-child(n) {
     animation: reveal-second-coins 2s ease-in-out 3.2s forwards;
   }
 
+  .cta {
+    width: 160px;
+  }
+
   @keyframes land {
     0% {
       right: -100px;
