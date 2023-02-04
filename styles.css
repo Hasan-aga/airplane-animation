@@ -279,23 +279,43 @@ div.celebration img:nth-child(3) {
   }
 
   .coins img {
-    width: 25%;
+    scale: 0.1 !important;
   }
-
+  .coins img:nth-child(4) {
+    visibility: hidden;
+  }
+  .coins img:nth-child(5) {
+    visibility: hidden;
+  }
+  .coins img:nth-child(6) {
+    visibility: hidden;
+  }
   div.celebration img:nth-child(1) {
-    width: 130%;
+    width: 30%;
     left: 0;
     animation: celebrate 1s ease-in 3.5s forwards;
   }
   div.celebration img:nth-child(2) {
-    width: 140%;
+    width: 40%;
     left: 30%;
     animation: celebrate 1s ease-in 3.2s forwards;
   }
   div.celebration img:nth-child(3) {
-    width: 130%;
+    width: 30%;
     left: 60%;
     animation: celebrate 1s ease-in 3.5s forwards;
+  }
+
+  @keyframes reveal-coins {
+    to {
+      top: -20%;
+    }
+  }
+
+  @keyframes faster-coins {
+    to {
+      translate: 2% 1%;
+    }
   }
 
   @keyframes move-man {
