@@ -71,23 +71,28 @@ main {
   width: 100%;
 }
 
-.airplane-container {
+/* .airplane-container {
   z-index: 5;
   position: relative;
   translate: 30% -23%;
-  animation: land 1s ease-in-out 0s forwards;
-}
+} */
 
 .airplane {
   position: absolute;
-  left: -30%;
+  right: -30%;
+  top: 15%;
+
   transform: scale(0.7);
+  animation: land 1s ease-in-out 0s forwards;
 }
 
 .airplane-door {
+  position: absolute;
+  top: -48%;
+  translate: -11.5% 0.5%;
   transform: scale(0.085);
-  translate: -41% -38%;
-  animation: open-door 1s ease-in-out 1s forwards;
+  animation: land 1s ease-in-out 0s forwards,
+    open-door 1s ease-in-out 1s forwards;
 }
 
 .man1 {
@@ -190,7 +195,7 @@ div.celebration img:nth-child(3) {
 }
 @keyframes open-door {
   to {
-    translate: -36% -38%;
+    translate: -6% 1%;
     scale: 0.9;
   }
 }
